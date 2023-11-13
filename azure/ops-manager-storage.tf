@@ -75,7 +75,7 @@ resource "azurerm_storage_container" "stemcell" {
   name                  = "stemcell"
   depends_on            = [azurerm_storage_account.bosh]
   storage_account_name  = azurerm_storage_account.bosh.name
-  container_access_type = "blob"
+  container_access_type = "private"
 }
 
 resource "azurerm_storage_table" "stemcells" {
